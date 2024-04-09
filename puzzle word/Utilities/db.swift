@@ -39,7 +39,7 @@ class Db {
                     
 //                    let demo = entries.filter(id == rowid)
                     
-                    let rows =  try db.prepare("SELECT word, wordtype, definition FROM entries where length(word) > 2 and length(word) < 20 order by  random() limit 300")
+                    let rows =  try db.prepare("SELECT word, wordtype, definition FROM entries where length(word) > 2 and length(word) < 20 order by  random() limit 500")
                     let randomIntegers = generateRandomArray(count: wordListLength)
                     wordItemList = []
                     for row in rows.enumerated() {
